@@ -23,7 +23,9 @@ module.exports.signin=function(req,res){
         if(user.length)
         {
             console.log(user);
-            res.render('chating');
+            res.render('chating',{
+                email:req.body.email
+            });
         }
         else
         {
